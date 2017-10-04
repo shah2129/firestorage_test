@@ -1,0 +1,9 @@
+*.pem
+*.csr
+*.backup
+*.swp
+*.env
+
+node_modules/
+config/
+test.js #

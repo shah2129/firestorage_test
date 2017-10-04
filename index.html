@@ -9,11 +9,21 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-messaging.js"></script>
 
+    <!-- Leave out Storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-storage.js"></script> -->
 
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        var config = {
+            // ...
+        };
+        firebase.initializeApp(config);
+    </script>
     <script>
         // Initialize Firebase ....
         var config = {
@@ -25,6 +35,45 @@
             messagingSenderId: "730803974642"
         };
         firebase.initializeApp(config);
+
+
+        var citiesRef = db.collection("cities");
+
+        citiesRef.doc("SF").set({
+            name: "San Francisco",
+            state: "CA",
+            country: "USA",
+            capital: false,
+            population: 860000
+        });
+        citiesRef.doc("LA").set({
+            name: "Los Angeles",
+            state: "CA",
+            country: "USA",
+            capital: false,
+            population: 3900000
+        });
+        citiesRef.doc("DC").set({
+            name: "Washington, D.C.",
+            state: null,
+            country: "USA",
+            capital: true,
+            population: 680000
+        });
+        citiesRef.doc("TOK").set({
+            name: "Tokyo",
+            state: "null",
+            country: "Japan",
+            capital: true,
+            population: 9000000
+        });
+        citiesRef.doc("BJ").set({
+            name: "Beijing",
+            state: null,
+            country: "China",
+            capital: true,
+            population: 21500000
+        });
     </script>
 
 
