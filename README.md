@@ -1,2 +1,2 @@
 # firestorage_test
-Test of Firestorage
+Test of Firestorage.
