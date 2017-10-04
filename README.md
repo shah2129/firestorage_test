@@ -1,2 +1,2 @@
-# firestorage_test
-Test of Firestorage.
+# firestore_test
+Test of Firestore.
